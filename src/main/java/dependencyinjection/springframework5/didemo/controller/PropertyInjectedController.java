@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 public class PropertyInjectedController {
 
     @Autowired
-    private GreetingService greetingService;
+    private GreetingService greetingServiceImpl;
 
     public String sayHello(){
-        return greetingService.sayHello() + " PropertyInjectedController";
+        return greetingServiceImpl.sayHello() + " PropertyInjectedController";
     }
 
 }
