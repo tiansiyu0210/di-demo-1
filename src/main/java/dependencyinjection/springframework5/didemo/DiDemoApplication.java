@@ -1,6 +1,7 @@
 package dependencyinjection.springframework5.didemo;
 
 import dependencyinjection.springframework5.didemo.bean.DatabaseBeanSample;
+import dependencyinjection.springframework5.didemo.bean.JmsBeanSample;
 import dependencyinjection.springframework5.didemo.controller.ConstructorInjectedController;
 import dependencyinjection.springframework5.didemo.controller.MyController;
 import dependencyinjection.springframework5.didemo.controller.PropertyInjectedController;
@@ -30,5 +31,12 @@ public class DiDemoApplication {
         System.out.println(databaseBeanSample.getUsername());
         System.out.println(databaseBeanSample.getPassword());
         System.out.println(databaseBeanSample.getUrl());
+
+        System.out.println("========print out properties in jms.properties file=======");
+        JmsBeanSample jmsBeanSample = applicationContext.getBean(JmsBeanSample.class);
+        System.out.println(jmsBeanSample.getPassword());
+        System.out.println(jmsBeanSample.getUrl());
+        System.out.println(jmsBeanSample.getUsername());
+
     }
 }
