@@ -1,5 +1,6 @@
 package dependencyinjection.springframework5.didemo;
 
+import dependencyinjection.springframework5.didemo.bean.DatabaseBeanSample;
 import dependencyinjection.springframework5.didemo.controller.ConstructorInjectedController;
 import dependencyinjection.springframework5.didemo.controller.MyController;
 import dependencyinjection.springframework5.didemo.controller.PropertyInjectedController;
@@ -23,5 +24,11 @@ public class DiDemoApplication {
         System.out.println(applicationContext.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(applicationContext.getBean(SetterInjectedController.class).sayHello());
         System.out.println(applicationContext.getBean(ConstructorInjectedController.class).sayHello());
+
+        DatabaseBeanSample databaseBeanSample = applicationContext.getBean(DatabaseBeanSample.class);
+        System.out.println("========print out properties in database.properties file=======");
+        System.out.println(databaseBeanSample.getUsername());
+        System.out.println(databaseBeanSample.getPassword());
+        System.out.println(databaseBeanSample.getUrl());
     }
 }
