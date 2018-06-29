@@ -9,7 +9,6 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import dependencyinjection.springframework5.didemo.bean.DatabaseBeanSample;
 
 @Configuration
-@PropertySource({"classpath:database.properties", "classpath:jms.properties"})
 public class PropertyConfig {
 
     @Value("${mysql.username}")
@@ -47,12 +46,4 @@ public class PropertyConfig {
         databaseBeanSample.setUsername(username);
         return databaseBeanSample;
     }
-
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
-
-
 }
