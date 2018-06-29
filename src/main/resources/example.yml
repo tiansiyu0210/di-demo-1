@@ -1,0 +1,38 @@
+# this is a comment, should be ignored
+
+name: siyu tian
+
+
+#list
+
+names:  # i can put comment here
+    - siyu tian
+    - liping wang
+    - wei wang
+
+piund_sigh: "#"
+
+#object
+
+book:
+    author: siyu tian
+    publisher: liping wang
+
+#boolean
+truth: yes
+another_truth: True
+more_true: true
+wrong: no # No False false
+
+single_quote_string: "i'm a super star"
+colon_string: "i say: stop"
+
+multiple_lines: |
+   ew   rerewr ewqw
+   cdf vfvfe erere
+   def gtrgr deq
+
+just_one_line: >
+   this is just
+   a one line
+   string.
