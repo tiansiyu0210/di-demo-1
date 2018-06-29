@@ -1,0 +1,4 @@
+jms:
+  username: tian
+  password: passwordJms
+  url: jms_url
